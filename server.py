@@ -16,7 +16,7 @@ def comprobar(id): #comprobar la consulta de cliente guardada en items #existe o
         items.index(id) # id si encuentra ejecuta no se encuentra 
         return 'False',201
     except Exception as error:
-        #print(error)
+        print(error)
         items.append(id)
         return 'True',200
 

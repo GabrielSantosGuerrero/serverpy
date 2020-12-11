@@ -11,7 +11,7 @@ hilos = [] #vector de hilos
 conn = db()
 
 name = "Historial.csv"
-url = "http://779482d99530.ngrok.io"
+url = "https://proyectocompu.herokuapp.com/"
 nombre = "AlexisPC"+str(rd.randint(0,10))
 inicio = 0 
 fin = rd.randint(5,10)
