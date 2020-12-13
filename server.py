@@ -8,7 +8,7 @@ items = []
 
 @app.route('/',methods=['GET'])
 def _():
-    time.sleep(random.randint(2,5)+1)  #peticiones pueda atender, tiempo de espera 
+    time.sleep(random.randint(2,25))  #peticiones pueda atender, tiempo de espera 
     return comprobar(request.values.get('id'))
     
 
