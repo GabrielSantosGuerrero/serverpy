@@ -7,12 +7,12 @@ app = Flask(__name__)
 items = []
 
 @app.route('/',methods=['GET'])
-async def _():
+def _():
     time.sleep(random.randint(2,5)+1)  #peticiones pueda atender, tiempo de espera 
-    resp = await comprobar(request.values.get('id'))
-    return resp[1]
+    return comprobar(request.values.get('id'))
+    
 
-async def comprobar(id): #comprobar la consulta de cliente guardada en items #existe o no existe dentro del vector
+def comprobar(id): #comprobar la consulta de cliente guardada en items #existe o no existe dentro del vector
     try:
         items.index(id) # id si encuentra ejecuta no se encuentra 
         return 'False',201
