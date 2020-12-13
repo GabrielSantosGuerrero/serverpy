@@ -8,7 +8,8 @@ items = []
 
 @app.route('/',methods=['GET'])
 def _():
-    time.sleep(random.randint(3,10))  #peticiones pueda atender, tiempo de espera 
+    #time.sleep(random.randint(3,10))  #peticiones pueda atender, tiempo de espera 
+    time.sleep(10)
     return comprobar(request.values.get('id'))
 
 def comprobar(id): #comprobar la consulta de cliente guardada en items #existe o no existe dentro del vector
