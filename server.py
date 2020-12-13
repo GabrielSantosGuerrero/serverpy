@@ -9,7 +9,8 @@ items = []
 @app.route('/',methods=['GET'])
 async def _():
     time.sleep(random.randint(2,5)+1)  #peticiones pueda atender, tiempo de espera 
-    return await comprobar(request.values.get('id'))
+    resp = await comprobar(request.values.get('id'))
+    return resp
 
 async def comprobar(id): #comprobar la consulta de cliente guardada en items #existe o no existe dentro del vector
     try:
