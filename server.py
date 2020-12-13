@@ -1,6 +1,6 @@
 from flask import Flask,request
 import time
-
+import random
 
 app = Flask(__name__)
 
@@ -8,7 +8,7 @@ items = []
 
 @app.route('/',methods=['GET'])
 def _():
-    time.sleep(5)  #peticiones pueda atender, tiempo de espera 
+    time.sleep(random.randint(2,5)+1)  #peticiones pueda atender, tiempo de espera 
     return comprobar(request.values.get('id'))
 
 def comprobar(id): #comprobar la consulta de cliente guardada en items #existe o no existe dentro del vector
